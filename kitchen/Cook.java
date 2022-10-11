@@ -54,7 +54,7 @@ public class Cook extends Observable implements Runnable{
                     while (true) {
                         Thread.sleep(10);
                         if (!queue.isEmpty()) {
-                                    this.startCookingOrder((Order) queue.poll());
+                                    this.startCookingOrder((Order) queue.take());
 
                         }
                     }
