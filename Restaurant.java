@@ -26,15 +26,11 @@ public class Restaurant {
         thread2.setDaemon(true);
         thread1.start();
         thread2.start();
-//        StatisticManager statisticManager = StatisticManager.getInstance();
-//        statisticManager.register(cook);
-//        statisticManager.register(cook2);
+
         List<Tablet> tablets = new ArrayList<>();
         for(int i = 1; i <= 5; i++){
             Tablet tablet = new Tablet(i);
             tablet.setQueue(ORDER_QUEUE);
-//            OrderManager orderManager = new OrderManager();
-//            tablet.addObserver(orderManager);
             tablets.add(tablet);
         }
         Waiter waiter = new Waiter();
